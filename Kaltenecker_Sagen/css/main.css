@@ -1,8 +1,42 @@
 /*Scott Kaltenecker
-CS 145 Web Design Lab 9
-3/12/2019
+CS 145 Web Design
+Klik Final Project -- main.css
+4/8/2019
 */
 
+/*
+#klick-carousel{
+    margin-top: 10px;
+}
+*/
+
+.carousel-inner{
+    width: 100%
+}
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+    margin-bottom: 50px;
+}
+
+body {
+	margin: 0;
+	background: #fff;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+footer{
+    clear: both;
+    color: #fff;
+    background-color: #222;
+    padding: .75em;
+    font-size: .6em;
+}
+
+/*
 body{
     background-image: radial-gradient(rgb(49,49,49) 10%,rgb(35,45,54)50%, black);
     font-size: 14px;
@@ -11,6 +45,17 @@ body{
     margin: 0px;
     padding: 0px;
     font-size: 14px;
+}
+
+
+backg {
+    background-image: url("../images/background5.jpg");
+    margin: 0%;
+    float: left;
+    height: 733px;
+    width: 1000px;
+    repeat: none;
+    opacity: 0.8;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -34,4 +79,4 @@ main{
     margin: 10px;
     padding: 10px;
     font-size: 1.2em;
-}
+}*/

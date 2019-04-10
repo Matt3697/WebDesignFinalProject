@@ -5,129 +5,260 @@ Klik Final Project -- global.css
 */
 
 
-.container{
-    width: 1000px;
-    margin: 0 auto;
-    font-family: 'Roboto Condensed', sans-serif;
+/*CSS Variables*/
+:root {
+    --background: rgba(64, 64, 64, .75);
+}
+
+/*Select all elements, resize box to webpage */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 .clear{
     clear: both;
 }
 
+/*navigation style begin*/
 header{
-    display: table;
-    background-color: #333;
+    background: var(--background);
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    /*    keep navigation bar in same place when scrolling*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 
 #logo{
-    float: left;
-    margin: 5px;
-    padding: 10px 20px 10px 20px;
-    height: 28px;
-    border: 3px solid #3335;
-    background-color: #eee;
+    margin: 10px;
+    width: 50%;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    opacity: 0;
+    /*    closing transition time*/
+    transition: opacity 100ms ease-in-out;
+}
+
+nav a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+/*turn off check box and make char clickable*/
+.nav-toggle {
+    display: none;
+}
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 200ms ease-in-out 200ms;
+}
+
+/*create three line bar icon*/
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;    
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #fff;
+    height: 2.25px;
+    width: 2.5em;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before {
+    bottom: 9px;
+}
+.nav-toggle-label span::after {
+    top: 9px;
+}
+
+/*only executes when the width exceeds the set number of px*/
+@media screen and (min-width: 800px) {
+    /*    turn off sidebar*/
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
+    nav {
+        position: relative;
+/*        text-align: left;*/
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+/*        left: initial;*/
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 2em;
+        margin-bottom: 0;
+
+    }
+
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 4px;
+        background-color: #000;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
+
+
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+}
+
+/*navigation style end*/
+
+
+/*
+#logo{
+float: left;
+margin: 5px;
+padding: 10px 20px 10px 20px;
+height: 28px;
+border: 3px solid #3335;
+background-color: #eee;
 }
 
 #logo:active{
-    opacity: 0.5;
-    transition: 150ms;
+opacity: 0.5;
+transition: 150ms;
 }
+
+#nav {
+margin: 8px 10px 7px 10px;
+padding: 0px;
+list-style-type: none;
+text-align: right;
+float: right;
+}
+
+#nav ::after{
+content: '';
+display: block;
+height: 3px;
+width: 0%;
+top: -3px;
+background-color: #aaaa; 
+position: absolute;
+transition: all 250ms linear;
+
+}
+
+#nav :hover ::after{
+width: 100%;
+}
+
+#nav li{
+display: inline-block;
+margin-right: 25px;
+margin-left: 25px;
+margin-top: 15px;
+margin-bottom: 15px;
+position: relative;
+}
+
+#nav li a{
+color: #eee;
+font-size: 15px;
+text-decoration: none;
+text-transform: uppercase;
+transition: all 250ms linear;
+}
+
+#nav li a:hover{
+color: #aaaa;
+}
+*/
+
 
 #clothes{
     float: left;
     margin: 5px;
     padding: 3px 4px 4px 3px;
     height: 100px;
-    border: 1px solid #3335;
+    border: 0.5px solid #3335;
 }
 #clothes:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    background-color: rgba(19, 19, 19, 0.333);
+    background-color: #3335;
 }
-
-backg {
-    background-image: url("../images/background5.jpg");
-    margin: 0%;
-    float: left;
-    height: 733px;
-    width: 1000px;
-    repeat: none;
-    opacity: 0.8;
-}
-
-#nav {
-    margin: 8px 10px 7px 10px;
-    padding: 0px;
-    list-style-type: none;
-    text-align: right;
-    float: right;
-}
-
-#nav ::after{
-    content: '';
-    display: block;
-    height: 3px;
-    width: 0%;
-    top: -3px;
-    background-color: #aaaa; 
-    position: absolute;
-    transition: all 250ms linear;
-
-}
-
-#nav :hover ::after{
-    width: 100%;
-}
-
-#nav li{
-    display: inline-block;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-#nav li a{
-    color: #eee;
-    font-size: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 250ms linear;
-}
-
-#nav li a:hover{
-    color: #aaaa;
-}
-
-
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Playfair Display SC';
-    font-weight: bold;
-    color: rgb(29, 28, 28);
-    margin-bottom: 0px;
-    margin-top: 30px;
-    padding-left: 10px;
-}
-
-p{
-    font-family: 'Roboto Condensed', sans-serif;
-    padding-left: 12px;
-}
-body{
-    background-color: rgb(77, 77, 77)
-}
-
-
-
-
-
-
-
-
-
 
 
 

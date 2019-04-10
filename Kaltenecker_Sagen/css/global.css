@@ -1,6 +1,6 @@
-/*Scott Kaltenecker
+/*Scott Kaltenecker, Matt Sagen
 CS 145 Web Design
-Klik Final Project -- global.css
+Klik Final Project == global.css
 4/8/2019
 */
 
@@ -121,7 +121,7 @@ nav a:hover{
 }
 
 /*only executes when the width exceeds the set number of px*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 500px) {
     /*    turn off sidebar*/
     .nav-toggle-label {
         display: none;

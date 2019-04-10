@@ -6,9 +6,11 @@ Klik Final Project -- global.css
 
 
 /*CSS Variables*/
+/*
 :root {
-    --background: rgba(64, 64, 64, .75);
+    --nav-bg-color: rgba(64, 64, 64, .75);
 }
+*/
 
 /*Select all elements, resize box to webpage */
 *, *::before, *::after {
@@ -21,7 +23,7 @@ Klik Final Project -- global.css
 
 /*navigation style begin*/
 header{
-    background: var(--background);
+    background: rgba(64, 64, 64, .75);
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     /*    keep navigation bar in same place when scrolling*/
@@ -40,7 +42,7 @@ nav{
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--background);
+    background: rgba(64, 64, 64, .75);
     width: 100%;
     transform: scale(1,0);
     transform-origin: top;
@@ -259,23 +261,3 @@ color: #aaaa;
 #clothes:hover{
     background-color: #3335;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

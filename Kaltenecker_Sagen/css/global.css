@@ -4,39 +4,40 @@ Klik Final Project == global.css
 4/8/2019
 */
 
-
-/*CSS Variables*/
-/*
-:root {
-    --nav-bg-color: rgba(64, 64, 64, .75);
-}
-*/
-
-/*Select all elements, resize box to webpage */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 .clear{
     clear: both;
 }
 
+/*Select all elements, account for margin/padding when changing width and height*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /*navigation style begin*/
 header{
-/*    background: rgba(64, 64, 64, .85);*/
     background-image: radial-gradient(#656565 ,#252525 95%);
     opacity: .85;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', 'sans-serif';
     text-align: center;
     /*    keep navigation bar in same place when scrolling*/
     position: fixed;
-    z-index: 999;
+    z-index: 500;
     width: 100%;
 }
 
 #logo{
     margin: 10px;
-    width: 50%;
+    width: 35%;       
+}
+
+#logo:active{
+    opacity: .5;
+    transition: 250ms;
+    
+}
+
+#nav-icon-color{
+    color: white;
 }
 
 nav{
@@ -58,13 +59,14 @@ nav ul{
     list-style: none;
 }
 
+/*Drop down menu spacing*/
 nav li{
     margin-bottom: 1em;
     margin-left: 1em;
 }
 
 nav a{
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-size: 1em;
     text-transform: uppercase;
@@ -102,38 +104,18 @@ nav a:hover{
     display: flex;
     align-items: center;    
 }
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    display: block;
-    background: #fff;
-    height: 2.25px;
-    width: 2.5em;
-    border-radius: 2px;
-    position: relative;
-}
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-}
-.nav-toggle-label span::before {
-    bottom: 9px;
-}
-.nav-toggle-label span::after {
-    top: 9px;
-}
 
 /*only executes when the width exceeds the set number of px*/
-@media screen and (min-width: 500px) {
-    /*    turn off sidebar*/
+@media screen and (min-width: 600px) {
+    /*turn off sidebar*/
     .nav-toggle-label {
         display: none;
     }
 
     header {
         display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        position: fixed;
+        grid-template-columns: 1fr auto minmax(500px, 3fr) 1fr;
     }
 
     .logo {
@@ -142,12 +124,10 @@ nav a:hover{
 
     nav {
         position: relative;
-/*        text-align: left;*/
         transition: none;
         transform: scale(1,1);
         background: none;
         top: initial;
-/*        left: initial;*/
         grid-column: 3 / 4;
         display: flex;
         justify-content: flex-end;
@@ -159,109 +139,32 @@ nav a:hover{
     }
 
     nav li {
-        margin-left: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
         margin-bottom: 0;
-
     }
 
     nav a{
         opacity: 1;
         position: relative;
     }
-
+    /*create line about full screen nav links*/
     nav a::before {
         content: '';
         display: block;
         height: 4px;
         background-color: #ffffff;
         position: absolute;
-        top: -3px;
+        top: -5px;
         left: 0;
         right: 0;
         transform: scale(0, 1);
         transform-origin: top;
         transition: transform ease-in-out 250ms;
-
-
     }
 
     nav a:hover::before {
         transform: scale(1,1);
     }
 }
-
 /*navigation style end*/
-
-
-/*
-#logo{
-float: left;
-margin: 5px;
-padding: 10px 20px 10px 20px;
-height: 28px;
-border: 3px solid #3335;
-background-color: #eee;
-}
-
-#logo:active{
-opacity: 0.5;
-transition: 150ms;
-}
-
-#nav {
-margin: 8px 10px 7px 10px;
-padding: 0px;
-list-style-type: none;
-text-align: right;
-float: right;
-}
-
-#nav ::after{
-content: '';
-display: block;
-height: 3px;
-width: 0%;
-top: -3px;
-background-color: #aaaa; 
-position: absolute;
-transition: all 250ms linear;
-
-}
-
-#nav :hover ::after{
-width: 100%;
-}
-
-#nav li{
-display: inline-block;
-margin-right: 25px;
-margin-left: 25px;
-margin-top: 15px;
-margin-bottom: 15px;
-position: relative;
-}
-
-#nav li a{
-color: #eee;
-font-size: 15px;
-text-decoration: none;
-text-transform: uppercase;
-transition: all 250ms linear;
-}
-
-#nav li a:hover{
-color: #aaaa;
-}
-*/
-
-
-#clothes{
-    float: left;
-    margin: 5px;
-    padding: 3px 4px 4px 3px;
-    height: 100px;
-    border: 0.5px solid #3335;
-}
-#clothes:hover{
-    background-color: #3335;
-}

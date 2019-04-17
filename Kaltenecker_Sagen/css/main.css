@@ -44,9 +44,15 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 0em;
+    grid-column-gap: 6em;
+    grid-row-gap: 3em;
 /*    justify-content: center;*/
-    padding: 0em;    
+    padding: 1.5em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background-image: url(../images/white-brick-wall.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 /*Image Hover Effects*/
@@ -59,6 +65,7 @@ body {
     text-align: center;
     cursor: default;
     background: rgba(80,80,80,1);
+    border: 3px solid #505050;
 }
 
 .grid-item .overlay {
@@ -97,7 +104,7 @@ body {
     text-align: center;
     position: relative;
     font-size: 1.5em;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     font-weight: bold;
     overflow: hidden;
     padding: .5em 0;
@@ -126,7 +133,7 @@ body {
 
 .grid-item a {
     color: #fff;
-    font-size: 2vw;
+    font-size: 1.5vw;
     opacity: 0;
     text-decoration: none;
     filter: alpha(opacity=0);
@@ -154,6 +161,12 @@ body {
     text-decoration: underline;
 }
 
+/*Parallax Styling*/
+.parallax-window{
+    min-height: 400px;
+    background: transparent;
+}
+
 
 /*Footer Styling*/
 footer{
@@ -161,6 +174,8 @@ footer{
     color: #fff;
     background-color: #222;
     padding: .75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     font-size: .6em;
 }
 

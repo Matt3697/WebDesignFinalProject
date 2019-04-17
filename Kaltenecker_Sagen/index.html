@@ -18,6 +18,10 @@ Klik Final Project == index.html
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+        <!--    parallax        -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="/path/to/parallax.js"></script>
+
         <!--    Stylesheets     -->
         <link href="css/global.css" rel="stylesheet" type="text/css">
         <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -57,10 +61,6 @@ Klik Final Project == index.html
         </header>
 
         <main>
-            <!--
-<br>
-<br>
--->
             <!--  carousel  -->
             <div id="klick-carousel" class="carousel slide" data-ride="carousel" data-interval="8000"> <!--data-pause="hover">-->
                 <ul class="carousel-indicators">
@@ -107,15 +107,55 @@ Klik Final Project == index.html
                 </a>
             </div>
 
-            <div class="clear"></div>
+            <!--            <div class="clear"></div>-->
 
             <div class="grid-container">
-                <div class="grid-item"><img src="images/girl-yellowjacket.jpg" alt=""></div>
-                <div class="grid-item"><img src="images/girl-redhat.jpg" alt=""></div>
-                <div class="grid-item"><img src="images/man-cube.jpg" alt=""></div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/girl-yellowjacket.jpg" alt="">
+                    <div class="overlay">
+                        <h2>New Apparel</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/girl-redhat.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Spring Collection</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/man-cube.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Designers</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <h1>Best Sellers</h1>
+            <div class="clear"></div>
+
+            <div class="products">
+
+                <h1>Best Sellers</h1>
+                <h2>Shirts</h2>
+                <h2>Pants</h2>
+                <h2>Accessories</h2>
+                <button>VIEW ALL PRODUCTS</button>
+
+            </div>
+
+            <div class="clear"></div>
+
 
 
         </main>
@@ -162,7 +202,7 @@ Klik Final Project == index.html
 
                 <div class="foot-grid-item">
                     <h6>Connect with Us</h6>
-                    <ul id="social">
+                    <ul>
                         <a href=""><li><i class="fab fa-facebook"></i> Facebook</li></a>
                         <a href=""><li><i class="fab fa-instagram"></i> Instagram</li></a>
                         <a href=""><li><i class="fab fa-twitter-square"></i> Twitter</li></a>

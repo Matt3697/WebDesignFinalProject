@@ -6,9 +6,10 @@ Klik Final Project == main.css
 
 body {
     margin: 0;
-    background-color: rgba(80,80,80,.85);
+/*    background-color: rgba(80,80,80,.85);*/
     font-family: 'Roboto Condensed', 'sans-serif';
     font-weight: 400;
+/*    max-width: 1000px;*/
 }
 
 /*Carousel Styling*/
@@ -16,7 +17,6 @@ body {
 .carousel-inner img {
     width: 100%;
     height: 100%;
-    margin-bottom: 20px;
 }
 
 .carousel-indicators li {
@@ -40,22 +40,122 @@ body {
     font-size: 1em;
 }
 
-/*Image Hover Effects*/
-
-
+/*Image Grid Styling*/
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 1em;
-    justify-content: center;
-/*    background-color: rgba(80,80,80,.85);    */
-    padding: 1em;    
+    grid-column-gap: 0em;
+/*    justify-content: center;*/
+    padding: 0em;    
 }
 
-.grid-item img{
-    max-width: 100%;
+/*Image Hover Effects*/
+.grid-item {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: rgba(80,80,80,1);
 }
 
+.grid-item .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+}
+
+.grid-item img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid-item:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.grid-item h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 1.5em;
+    font-size: 2.5vw;
+    font-weight: bold;
+    overflow: hidden;
+    padding: .5em 0;
+    margin-top: 1.9em;
+    background-color: rgba(50,50,50,.5);
+}
+
+.grid-item h2:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+
+.grid-item:hover h2:after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.grid-item a {
+    color: #fff;
+    font-size: 2vw;
+    opacity: 0;
+    text-decoration: none;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+
+.grid-item:hover a, .grid-item:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/*Product Styling*/
+.products{
+    color: #222;
+    text-align: center;
+}
+
+.products h1{
+    text-decoration: underline;
+}
+
+
+/*Footer Styling*/
 footer{
     clear: both;
     color: #fff;
@@ -86,5 +186,12 @@ footer{
 hr{
     background-color: #fff;
     width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+footer p{
+    font-size: .9em;
+    margin-bottom: 0;
 }
 

@@ -50,7 +50,7 @@ body {
     padding: 1.5em;
     padding-top: 5em;
     padding-bottom: 5em;
-    background-image: url(../images/white-brick-wall.jpg);
+    background-image: url(../images/mainpage/white-brick-wall.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -192,7 +192,8 @@ footer{
 }
 
 .foot-grid-item h6{
-    text-decoration: underline;
+    text-decoration: none;
+    font-size: 1.75em;
 }
 .foot-grid-item a{
     color: #fff;

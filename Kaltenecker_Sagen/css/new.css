@@ -1,32 +1,10 @@
-<<<<<<< HEAD
-/*Scott Kaltenecker
-Matthew Sagen
-=======
 /*Scott Kaltenecker, Matt Sagen
->>>>>>> d8e983808ff9a2d3e2303a035e03ed80bb8ff4c7
 CS 145 Web Design
 Klik Final Project == new.css
 4/8/2019
 */
 
 
-<<<<<<< HEAD
-#clothes{
-    float: left;
-    margin: 15px;
-    padding: 3px 4px 4px 3px;
-    height: 100px;
-    border: 1px solid #3335;
-}
-
-#clothes:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    background-color: rgba(19, 19, 19, 0.333);
-}
-
-
-=======
 .container{
     width: 1000px;
     margin: 0 auto;
@@ -50,7 +28,6 @@ p{
     padding-left: 12px;
     
 }
->>>>>>> d8e983808ff9a2d3e2303a035e03ed80bb8ff4c7
 body{
     background: #fff;
 }

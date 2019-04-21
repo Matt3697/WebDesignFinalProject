@@ -12,39 +12,48 @@ Klik Final Project -- new.html
 
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Klik</title>
+
+        <!--    Bootstrap     -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
         <!--    Stylesheets     -->
         <link href="../css/global.css" rel="stylesheet" type="text/css">
-<!--        <link href="css/main.css" rel="stylesheet" type="text/css">-->
-        <link href="../css/new.css" rel="stylesheet" type="text/css">   
+        <link href="../css/new.css" rel="stylesheet" type="text/css">
+
+
         <!--    FontAwesome     -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
         <!--    Google Fonts    -->
-        <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     </head>
 
 
     <body>
         <header>
-
-            <div class="container">
-                <a href="../index.html"> <img src="../images/klik-logo.png" id="logo"> </a>
-                <ul id="nav">
-                    <li><a href="../index.html" id="first-link">Home</a></li>
+            <a href="../index.html"> <img src="../images/klik-logo.png" alt="klik" id="logo"> </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="new.html">New</a></li>
                     <li><a href="women.html">Women</a></li>
                     <li><a href="men.html">Men</a></li>
                     <li><a href="cart.html">Cart</a></li>
                 </ul>
-                
-                <div class="clear"></div>
-            </div>
+            </nav>
+            <!--navigation bar toggle-->
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
             
+            <div class="clear"></div>
         </header>
 
         <main>
@@ -55,9 +64,6 @@ Klik Final Project -- new.html
             <img src="../images/menshirt.jpeg" id="clothes">
             <img src="../images/sunDress.jpeg" id="clothes">
             <img src="../images/jacket.jpeg" id="clothes">
-            
-
-
 
         </main>
     </body>

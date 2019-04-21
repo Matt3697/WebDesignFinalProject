@@ -4,33 +4,67 @@ Klik Final Project == men.css
 4/8/2019
 */
 
-
-.container{
-    width: 1000px;
+body{
+    /*    background-color: rgba(80,80,80,.85);*/
     margin: 0 auto;
     font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
 }
 
-.clear{
-    clear: both;
+#banner img{
+    width: 100%;
+    height: auto;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #fff;
+    padding: 10px;
+    grid-column-gap: 2em;
+    grid-row-gap: 1em;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.price{
+    color: #505050;
+    font-size: 2em;
+}
+
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #fff;
+    background-color: #282828;
+    transition: 200ms;
+}
+
+.card button:hover{
+    opacity: 0.85;
+}
+
+/*
 h1,h2,h3,h4,h5,h6{
-    font-weight: bold;
-    color: rgb(29, 28, 28);
-    margin-bottom: 0px;
-    margin-top: 30px;
-    padding-left: 10px;
+font-weight: bold;
+color: rgb(29, 28, 28);
+margin-bottom: 0px;
+margin-top: 30px;
+padding-left: 10px;
 }
 
 p{
-    font-family: 'Roboto Condensed', sans-serif;
-    padding-left: 12px;
-    
+padding-left: 12px;
+
 }
-body{
-    background: #fff;
-}
+*/
+
 
 
 

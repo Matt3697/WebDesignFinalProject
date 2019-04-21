@@ -10,15 +10,16 @@ Klik Final Project == index.html
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Klik</title>
+        <title>Klik-Main</title>
 
         <!--    Bootstrap     -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!--    parallax        -->
+        <script src="jquery/parallax.js-1.5.0/parallax.js"></script>
 
         <!--    Stylesheets     -->
         <link href="css/global.css" rel="stylesheet" type="text/css">
@@ -36,7 +37,7 @@ Klik Final Project == index.html
         <header>
 
 
-            <a href="index.html"> <img src="images/klik-logo.png" alt="klik" id="logo"> </a>
+            <a href="index.html"> <img src="images/logo/klik-logo-white.png" alt="klik-logo" id="logo"> </a>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
@@ -46,49 +47,51 @@ Klik Final Project == index.html
                     <li><a href="html/new.html">New</a></li>
                     <li><a href="html/women.html">Women</a></li>
                     <li><a href="html/men.html">Men</a></li>
-                    <li><a href="html/cart.html">Cart</a></li>
+                    <li><a href="html/cart.html">Cart <i class="fas fa-shopping-cart fa-s"></i></a></li>
                 </ul>
             </nav>
 
             <!--navigation bar toggle-->
             <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
+                <span id="nav-icon-color"><i class="fas fa-ellipsis-h fa-2x"></i></span>
             </label>
 
             <div class="clear"></div>
         </header>
 
-
-
-
-
-
-
         <main>
             <!--  carousel  -->
-            <div id="klick-carousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+            <div id="klick-carousel" class="carousel slide" data-ride="carousel" data-interval="8000"> <!--data-pause="hover">-->
                 <ul class="carousel-indicators">
                     <li data-target="#klick-carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#klick-carousel" data-slide-to="1"></li>
                     <li data-target="#klick-carousel" data-slide-to="2"></li>
+                    <li data-target="#klick-carousel" data-slide-to="3"></li>
                 </ul>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="index.html"><img src="images/background1.jpg" alt="klik"></a>
+                        <a href="index.html"><img src="images/carousel/background1.jpg" alt="klik"></a>
                         <div class="carousel-caption">
                             <h3>Men's</h3>
                             <p>Check out Summer Line</p>
                         </div>   
                     </div>
                     <div class="carousel-item">
-                        <a href="index.html"><img src="images/chicago.jpg" alt="klik"></a>
+                        <a href="index.html"><img src="images/carousel/background12.jpg" alt="klik"></a>
                         <div class="carousel-caption">
                             <h3>Women's</h3>
                             <p>New items on sale!</p>
                         </div>   
                     </div>
                     <div class="carousel-item">
-                        <a href="index.html"><img src="images/ny.jpg" alt="klik"></a>
+                        <a href="index.html"><img src="images/carousel/background7.jpg" alt="klik"></a>
+                        <div class="carousel-caption">
+                            <h3>Accessories</h3>
+                            <p>Check out our new line of sunglasses!</p>
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <a href="index.html"><img src="images/carousel/background8.jpg" alt="klik"></a>
                         <div class="carousel-caption">
                             <h3>Accessories</h3>
                             <p>Check out our new line of sunglasses!</p>
@@ -105,18 +108,148 @@ Klik Final Project == index.html
 
             <div class="clear"></div>
 
-            <h2>
-                From Cost Friendly To Extremely Trendy
-            </h2>
-            <h2>
-                 We Have What you Need!
-            </h2>
+            <div class="grid-container">
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/mainpage/girl-yellowjacket.jpg" alt="">
+                    <div class="overlay">
+                        <h2>New Apparel</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/mainpage/girl-redhat.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Casual Collection</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/mainpage/man-cube.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Formal Collection</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/mainpage/female-grey-jacket-cropped.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Accessories</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/mainpage/girl-striped-dress.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Jewlery</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img class="img-responsive" src="images/mainpage/male-yellow-wall.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Designers</h2>
+                        <p>
+                            <a href="#">Go To <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+<!--
+            <div class="clear"></div>
+
+            <div class="parallax-window" data-parallax="scroll" data-speed=".2" data-image-src="images/white-brick-wall.jpg"></div>
+
+            <div class="products">
+
+                <h1>Best Sellers</h1>
+                <h2>Shirts</h2>
+                <h2>Pants</h2>
+                <h2>Accessories</h2>
+                <button>VIEW ALL PRODUCTS</button>
+
+            </div>
+-->
+
+            <div class="clear"></div>
+
+
 
         </main>
 
         <footer>
-            (c) Copyright Klik, 2019. All rights reserved.
-            This is a work of fiction. Names, characters, businesses, places, events, locales, and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental. If the text in this document actually means anything, that's a mistake too, and would actually be really weird. It's supposed to just be filler. 
+
+            <div class="foot-grid-container">
+                <div class="foot-grid-item">
+                    <h6>Support</h6>
+                    <ul>
+                        <a href=""> <li>Order Status</li></a>
+                        <a href=""><li>Product Care</li></a>
+                        <a href=""><li>Size Chart</li></a>
+                        <a href=""><li>Shopping Support</li></a>
+                        <a href=""><li>FAQS</li></a>
+                    </ul></div>
+
+                <div class="foot-grid-item">
+                    <h6>Legal</h6>
+                    <ul>
+                        <a href=""><li>Terms of Service</li></a>
+                        <a href=""><li>Privacy Policy</li></a>
+                        <a href=""><li>Report Counterfeits</li></a>
+                    </ul>
+                </div>
+
+                <div class="foot-grid-item">
+                    <h6>Company</h6>
+                    <ul>
+                        <a href=""><li>Affiliate Program</li></a>
+                        <a href=""><li>Contact Us</li></a>
+                        <a href=""><li>Live Chat</li></a>
+                        <a href=""><li>Careers</li></a>
+                    </ul>
+                </div>
+
+                <div class="foot-grid-item">
+                    <h6>Customer Service</h6>
+                    <ul>
+                        <a href=""><li>Order Status</li></a>
+                        <a href=""><li>Monday to Friday 8am - 9pm EST</li></a>
+                    </ul>
+                </div>
+
+                <div class="foot-grid-item">
+                    <h6>Connect with Us</h6>
+                    <ul>
+                        <a href=""><li><i class="fab fa-facebook"></i> Facebook</li></a>
+                        <a href=""><li><i class="fab fa-instagram"></i> Instagram</li></a>
+                        <a href=""><li><i class="fab fa-twitter-square"></i> Twitter</li></a>
+                        <a href=""><li><i class="fab fa-youtube-square"></i> YouTube</li></a>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <p>(c) Copyright Klik, 2019.       All rights reserved.
+                This is a work of fiction. Names, characters, businesses, places, events, locales, and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental. If the text in this document actually means anything, that's a mistake too, and would actually be really weird. It's supposed to just be filler. 
+            </p>
         </footer>
 
     </body>

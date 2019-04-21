@@ -1,83 +1,215 @@
-/*Scott Kaltenecker
-Matthew Sagen
+
+/*Scott Kaltenecker, Matt Sagen
+>>>>>>> d8e983808ff9a2d3e2303a035e03ed80bb8ff4c7
 CS 145 Web Design
-Klik Final Project -- main.css
+Klik Final Project == main.css
 4/8/2019
 */
 
-/*
-#klick-carousel{
-    margin-top: 10px;
+body {
+    margin: 0;
+/*    background-color: rgba(80,80,80,.85);*/
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-weight: 400;
+/*    max-width: 1000px;*/
 }
-*/
 
-.carousel-inner{
-    width: 100%
-}
+/*Carousel Styling*/
 /* Make the image fully responsive */
 .carousel-inner img {
     width: 100%;
     height: 100%;
-    margin-top: 2em;
-    margin-bottom: 50px;
 }
 
-body {
-	margin: 0;
-	background: #fff;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 400;
+.carousel-indicators li {
+    background-color: rgba(255,255,255,.85);
+    height: .25em;
 }
 
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
+.carousel-caption {
+    color: #fff;
+}
+
+.carousel-caption h3 {
+    font-size: 3em;
+}
+
+.carousel-caption p {
+    font-size: 1em;
+}
+
+/*Image Grid Styling*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 6em;
+    grid-row-gap: 3em;
+/*    justify-content: center;*/
+    padding: 1.5em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background-image: url(../images/mainpage/white-brick-wall.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*Image Hover Effects*/
+.grid-item {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: rgba(80,80,80,1);
+    border: 3px solid #505050;
+}
+
+.grid-item .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+}
+
+.grid-item img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid-item:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.grid-item h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 1.5em;
+    font-size: 1.5vw;
+    font-weight: bold;
+    overflow: hidden;
+    padding: .5em 0;
+    margin-top: 1.9em;
+    background-color: rgba(50,50,50,.5);
+}
+
+.grid-item h2:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+
+.grid-item:hover h2:after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.grid-item a {
+    color: #fff;
+    font-size: 1.5vw;
+    opacity: 0;
+    text-decoration: none;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+
+.grid-item:hover a, .grid-item:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/*Product Styling*/
+.products{
+    color: #222;
+    text-align: center;
+}
+
+.products h1{
+    text-decoration: underline;
+}
+
+/*Parallax Styling*/
+.parallax-window{
+    min-height: 400px;
+    background: transparent;
+}
+
+
+/*Footer Styling*/
 footer{
     clear: both;
     color: #fff;
     background-color: #222;
     padding: .75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     font-size: .6em;
 }
 
-/*
-body{
-    background-image: radial-gradient(rgb(49,49,49) 10%,rgb(35,45,54)50%, black);
-    font-size: 14px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #bec0c7;
-    margin: 0px;
-    padding: 0px;
-    font-size: 14px;
+.foot-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 3em;
 }
 
-
-backg {
-    background-image: url("../images/background5.jpg");
-    margin: 0%;
-    float: left;
-    height: 733px;
-    width: 1000px;
-    repeat: none;
-    opacity: 0.8;
+.foot-grid-container ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Playfair Display SC';
-    font-weight: bold;
-    color: #bfbcb8;
-    margin-bottom: 0px;
-    margin-top: 30px;
+.foot-grid-item h6{
+    text-decoration: none;
+    font-size: 1.75em;
+}
+.foot-grid-item a{
+    color: #fff;
 }
 
-h1{
-    font-size: 3em;
-    color: #777;
+hr{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-#nav {
-    font-size: .75em;
+footer p{
+    font-size: .9em;
+    margin-bottom: 0;
 }
 
-main{
-    margin: 10px;
-    padding: 10px;
-    font-size: 1.2em;
-}*/

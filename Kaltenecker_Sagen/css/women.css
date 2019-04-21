@@ -1,28 +1,33 @@
-/*Scott Kaltenecker
-Matthew Sagen
+/*Scott Kaltenecker, Matt Sagen
 CS 145 Web Design
-Klik Final Project -- global.css
+Klik Final Project == women.css
 4/8/2019
 */
 
 
-#clothes{
-    float: left;
-    margin: 5px;
-    padding: 3px 4px 4px 3px;
-    height: 100px;
-    border: 1px solid #3335;
-}
-#clothes:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    background-color: rgba(19, 19, 19, 0.333);
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
+.clear{
+    clear: both;
+}
 
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    color: rgb(29, 28, 28);
+    margin-bottom: 0px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
 
-
-
+p{
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-left: 12px;
+    
+}
 body{
     background: #fff;
 }

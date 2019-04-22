@@ -53,6 +53,10 @@ nav{
     transition: transform 400ms ease-in-out;
 }
 
+.current{
+   color: #222;
+}
+
 nav ul{
     margin: 0;
     padding-left: 0;

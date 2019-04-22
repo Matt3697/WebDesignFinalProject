@@ -52,7 +52,7 @@ body {
     padding: 1.5em;
     padding-top: 5em;
     padding-bottom: 5em;
-    background-image: url(../images/mainpage/white-brick-wall.jpg);
+    background-image: url(../images/backgrounds/white-brick-wall.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -163,53 +163,5 @@ body {
     text-decoration: underline;
 }
 
-/*Parallax Styling*/
-.parallax-window{
-    min-height: 400px;
-    background: transparent;
-}
 
-
-/*Footer Styling*/
-footer{
-    clear: both;
-    color: #fff;
-    background-color: #222;
-    padding: .75em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    font-size: .6em;
-}
-
-.foot-grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-column-gap: 3em;
-}
-
-.foot-grid-container ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.foot-grid-item h6{
-    text-decoration: none;
-    font-size: 1.75em;
-}
-.foot-grid-item a{
-    color: #fff;
-}
-
-hr{
-    background-color: #fff;
-    width: 100%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-footer p{
-    font-size: .9em;
-    margin-bottom: 0;
-}
 

@@ -1,6 +1,4 @@
-
 /*Scott Kaltenecker, Matt Sagen
->>>>>>> d8e983808ff9a2d3e2303a035e03ed80bb8ff4c7
 CS 145 Web Design
 Klik Final Project == global.css
 4/8/2019
@@ -168,7 +166,50 @@ nav a:hover{
     nav a:hover::before {
         transform: scale(1,1);
     }
-
-    
+  
 }
 /*navigation style end*/
+
+/*Footer Styling*/
+footer{
+    clear: both;
+    color: #fff;
+    background-color: #222;
+    padding: .75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: .6em;
+}
+
+.foot-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 3em;
+}
+
+.foot-grid-container ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.foot-grid-item h6{
+    text-decoration: none;
+    font-size: 1.75em;
+}
+.foot-grid-item a{
+    color: #fff;
+}
+
+hr{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+footer p{
+    font-size: .9em;
+    margin-bottom: 0;
+}
+/*footer style end*/

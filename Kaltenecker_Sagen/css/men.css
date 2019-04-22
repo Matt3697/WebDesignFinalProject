@@ -11,30 +11,74 @@ body{
     box-sizing: border-box;
 }
 
+#banner{
+    position: relative;
+    text-align: center;
+    color: #fff;
+/*    line-height: .5em;*/
+}
+
 #banner img{
     width: 100%;
     height: auto;
 }
 
+#title-text{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(80,80,80,.75);
+    padding: .5em;   
+}
+
+#grid-title h2{
+    margin-top: .5em;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
 .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     background-color: #fff;
-    padding: 10px;
+    padding: 1em;
     grid-column-gap: 2em;
     grid-row-gap: 1em;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.card {
+    padding: .25em;
     max-width: 300px;
     margin: auto;
     text-align: center;
+    border-style: none;
+    transition: 200ms;
+}
+
+.card:hover{
+    box-shadow: 1px 5px 10px 1px #888888;
+    transform: scale(1.01)
+}
+
+.card img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card h4, p{
+    margin-bottom: 0;
+}
+
+.card h4{
+    font-weight: bold;
 }
 
 .price{
     color: #505050;
-    font-size: 2em;
+    font-size: 1em;
+    margin-bottom: .25em;
 }
 
 .card button{
@@ -42,7 +86,7 @@ body{
     outline: 0;
     padding: 12px;
     color: #fff;
-    background-color: #282828;
+    background-color: #222;
     transition: 200ms;
 }
 
@@ -50,20 +94,6 @@ body{
     opacity: 0.85;
 }
 
-/*
-h1,h2,h3,h4,h5,h6{
-font-weight: bold;
-color: rgb(29, 28, 28);
-margin-bottom: 0px;
-margin-top: 30px;
-padding-left: 10px;
-}
-
-p{
-padding-left: 12px;
-
-}
-*/
 
 
 

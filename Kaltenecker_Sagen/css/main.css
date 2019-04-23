@@ -1,5 +1,4 @@
 /*Scott Kaltenecker, Matt Sagen
->>>>>>> d8e983808ff9a2d3e2303a035e03ed80bb8ff4c7
 CS 145 Web Design
 Klik Final Project == main.css
 4/8/2019
@@ -7,10 +6,8 @@ Klik Final Project == main.css
 
 body {
     margin: 0;
-/*    background-color: rgba(80,80,80,.85);*/
     font-family: 'Roboto Condensed', 'sans-serif';
     font-weight: 400;
-/*    max-width: 1000px;*/
 }
 
 /*Carousel Styling*/
@@ -49,7 +46,6 @@ body {
     grid-template-columns: auto auto auto;
     grid-column-gap: 6em;
     grid-row-gap: 3em;
-/*    justify-content: center;*/
     padding: 1.5em;
     padding-top: 5em;
     padding-bottom: 5em;
@@ -163,6 +159,3 @@ body {
 .products h1{
     text-decoration: underline;
 }
-
-
-

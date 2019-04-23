@@ -4,9 +4,7 @@ Klik Final Project == women.css
 4/8/2019
 */
 
-
 body{
-    /*    background-color: rgba(80,80,80,.85);*/
     margin: 0 auto;
     font-family: 'Roboto Condensed', sans-serif;
     box-sizing: border-box;
@@ -16,7 +14,6 @@ body{
     position: relative;
     text-align: center;
     color: #fff;
-/*    line-height: .5em;*/
 }
 
 #banner img{
@@ -61,7 +58,7 @@ body{
 
 .card:hover{
     box-shadow: 1px 5px 10px 1px #888;
-/*    background-color: #ddd;*/
+    /*    background-color: #ddd;*/
     transform: scale(1.01);
 }
 

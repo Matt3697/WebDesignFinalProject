@@ -32,10 +32,12 @@ body {
 
 .carousel-caption {
     color: #fff;
+    text-transform: uppercase;
 }
 
 .carousel-caption h3 {
     font-size: 3em;
+    
 }
 
 .carousel-caption p {
